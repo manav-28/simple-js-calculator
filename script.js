@@ -10,10 +10,21 @@ Array.from(buttons).forEach((button)=>{
     else if(e.target.innerHTML == 'C'){
       string = ""
       document.querySelector('input').value = string;
+    }else if(e.target.innerHTML.includes("%")){
+      string = eval(string);
+     
+      document.querySelector('input').value = string/100  
     }
     else{ 
-    console.log(e.target)
-    string = string + e.target.innerHTML;
+      let domValue = e.target.innerHTML
+    if( document.querySelector('input').value ){
+      string = document.querySelector('input').value 
+    }if(e.target.innerHTML.includes("M+")){
+      domValue = "+"
+    }else if(e.target.innerHTML.includes("M-")){
+      domValue = "-"
+    }
+    string = string + domValue;
     document.querySelector('input').value = string;
       }
   })
