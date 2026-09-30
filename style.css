@@ -38,3 +38,12 @@ html, body {
 .color-grey{
     background-color: darkgray  ;
 }
+
+.memory-indicator{
+  height: 16px;
+  margin-top: -4px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 291px;
+  text-align: left;
+}
